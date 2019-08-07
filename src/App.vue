@@ -19,12 +19,22 @@
       </div>
 
     </div>
+
+    <div class="button-resultado">
+      <button
+        type="button"
+        @click="result">
+        Calcular
+      </button>
+      {{ resultado }}
+    </div>
   </div>
 </template>
 
 
 <script>
 import OperacaoSelect from "./components/OperacaoSelect"
+import { calculaPermutacao, calculaArranjo, calculaCombinatoria } from "./utils/calc"
 
 export default {
   name: 'app',
@@ -34,6 +44,21 @@ export default {
       operacao: "",
       n: null,
       p: null,
+      resultado: null,
+    }
+
+  },
+  methods: {
+    result (){
+      if (this.operacao === 'permutacao') {
+        this.resultado = calculaPermutacao(this.n)
+      }
+      else if (this.operacao === 'arranjo') {
+        this.resultado = calculaArranjo(this.n, this.p)
+      }
+      else if ( this.operacao === 'combinatoria') {
+        this.resultado = calculaCombinatoria(this.n, this.p)
+      }
     }
   }
 }
@@ -48,4 +73,16 @@ export default {
     width: 135px;
     text-align: center
   }
+
+  button {
+    display: inline-block;
+    margin: 0.5em;
+    padding: 1em;
+    background-color: rgb(147, 147, 236);
+    color: white;
+    border: none;
+    width: 135px;
+    cursor: pointer;
+  }
+
 </style>
