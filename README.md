@@ -20,6 +20,11 @@ yarn run build
 yarn run test
 ```
 
+### Run your tests Unit
+```
+yarn test:unit
+```
+
 ### Lints and fixes files
 ```
 yarn run lint
