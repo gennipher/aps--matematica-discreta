@@ -29,10 +29,9 @@
 </div>
 </template>
 
-
 <script>
 export default {
-  props: ["value"],
+  props: ['value'],
   data () {
     return {
       model: this.value
@@ -44,7 +43,7 @@ export default {
     }
   },
   methods: {
-    update (){
+    update () {
       this.$emit('input', this.model)
     }
   }
@@ -55,7 +54,8 @@ export default {
   label {
     display: inline-flex;
     padding: 10px;
-    margin: 5px;
+    margin: 20px 20px 40px;
+    font-size: 20px;
     cursor: pointer;
   }
 </style>

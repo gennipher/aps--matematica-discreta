@@ -1,8 +1,6 @@
-import {calculaPermutacao, calculaArranjo, calculaCombinatoria} from "@/utils/calc.js"
+import { calculaPermutacao, calculaArranjo, calculaCombinatoria } from '@/utils/calc.js'
 
 describe('Calcula permutacao', () => {
-
-
   it('deve fatorar o numero', () => {
     let resultado = 1
     let n = 4
@@ -10,7 +8,7 @@ describe('Calcula permutacao', () => {
       resultado = resultado * x
     }
     expect(resultado).toBe(24)
-  });
+  })
 
   it('deve fatorar o numero', () => {
     let resultado = 1
@@ -19,7 +17,7 @@ describe('Calcula permutacao', () => {
       resultado = resultado * x
     }
     expect(resultado).toBe(1)
-  });
+  })
 
   it('deve fatorar o numero', () => {
     let resultado = 1
@@ -28,7 +26,7 @@ describe('Calcula permutacao', () => {
       resultado = resultado * x
     }
     expect(resultado).toBe(1)
-  });
+  })
 
   it('deve fatorar o numero', () => {
     let resultado = 1
@@ -37,16 +35,16 @@ describe('Calcula permutacao', () => {
       resultado = resultado * x
     }
     expect(resultado).toBe(120)
-  });
+  })
 
   it('deve fatorar o numero', () => {
     let resultado = 1
-    let n = undefined
+    let n
     for (let x = n; x > 1; x--) {
       resultado = resultado * x
     }
     expect(resultado).toBeUndefined
-  });
+  })
 
   it('deve fatorar o numero', () => {
     let resultado = 1
@@ -55,7 +53,7 @@ describe('Calcula permutacao', () => {
       resultado = resultado * x
     }
     expect(resultado).toBeNull
-  });
+  })
 
   it('deve fatorar o numero', () => {
     let resultado = 1
@@ -64,12 +62,10 @@ describe('Calcula permutacao', () => {
       resultado = resultado * x
     }
     expect(resultado).toBeNaN
-  });
-
+  })
 })
 
 describe('Calcula arranjo', () => {
-
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
     let n = 3
@@ -84,7 +80,7 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBe(6)
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -100,7 +96,7 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBe(1)
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -116,7 +112,7 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBe(1)
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -132,7 +128,7 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBe(1)
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -148,7 +144,7 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBeUndefined
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -164,11 +160,11 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBeUndefined
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
-    let n = undefined
+    let n
     let p = 1
     for (let x = n; x > 1; x--) {
       resultadoDeN = resultadoDeN * x
@@ -180,7 +176,7 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBeUndefined
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -196,7 +192,7 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBeUndefined
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -212,12 +208,12 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBeUndefined
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
     let n = 0
-    let p = undefined
+    let p
     for (let x = n; x > 1; x--) {
       resultadoDeN = resultadoDeN * x
     }
@@ -228,12 +224,12 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBeUndefined
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
     let n = null
-    let p = undefined
+    let p
     for (let x = n; x > 1; x--) {
       resultadoDeN = resultadoDeN * x
     }
@@ -244,7 +240,7 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBeUndefined
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -260,12 +256,12 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBeNull
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
-    let n = undefined
-    let p = undefined
+    let n
+    let p
     for (let x = n; x > 1; x--) {
       resultadoDeN = resultadoDeN * x
     }
@@ -276,7 +272,7 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBeNull
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -292,7 +288,7 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBeUndefined
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -308,7 +304,7 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBeNull
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -324,7 +320,7 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBeNull
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -340,7 +336,7 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBeNaN
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -356,7 +352,7 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBeNaN
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -372,7 +368,7 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBeNaN
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -388,7 +384,7 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBe(1)
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -404,7 +400,7 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBe(1)
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -420,7 +416,7 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBe(1)
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -436,11 +432,11 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBe(1)
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
-    let n = undefined
+    let n
     let p = 1
     for (let x = n; x > 1; x--) {
       resultadoDeN = resultadoDeN * x
@@ -452,12 +448,12 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBe(1)
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
     let n = 1
-    let p = undefined
+    let p
     for (let x = n; x > 1; x--) {
       resultadoDeN = resultadoDeN * x
     }
@@ -468,12 +464,12 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBe(1)
-  });
+  })
 
   it('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
-    let n = undefined
-    let p = undefined
+    let n
+    let p
     for (let x = n; x > 1; x--) {
       resultadoDeN = resultadoDeN * x
     }
@@ -484,7 +480,7 @@ describe('Calcula arranjo', () => {
     }
     let resultadoFinal = resultadoDeN / resultadoDenominador
     expect(resultadoFinal).toBe(1)
-  });
+  })
 })
 
 describe('Calcula combinatoria', () => {
@@ -494,13 +490,11 @@ describe('Calcula combinatoria', () => {
     let p = 1
 
     for (let x = n; x > 1; x--) {
-
       resultadoDeN = resultadoDeN * x
     }
 
     let resultadoDeP = 1
     for (let y = p; y > 1; y--) {
-
       resultadoDeP = resultadoDeP * y
     }
 
@@ -514,7 +508,7 @@ describe('Calcula combinatoria', () => {
     let resultadoFinal = resultadoDeN / resultadoFinalDenominador
 
     expect(resultadoFinal).toBe(1)
-  });
+  })
 
   test('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -522,13 +516,11 @@ describe('Calcula combinatoria', () => {
     let p = 0
 
     for (let x = n; x > 1; x--) {
-
       resultadoDeN = resultadoDeN * x
     }
 
     let resultadoDeP = 1
     for (let y = p; y > 1; y--) {
-
       resultadoDeP = resultadoDeP * y
     }
 
@@ -542,7 +534,7 @@ describe('Calcula combinatoria', () => {
     let resultadoFinal = resultadoDeN / resultadoFinalDenominador
 
     expect(resultadoFinal).toBe(1)
-  });
+  })
 
   test('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -550,13 +542,11 @@ describe('Calcula combinatoria', () => {
     let p = 0
 
     for (let x = n; x > 1; x--) {
-
       resultadoDeN = resultadoDeN * x
     }
 
     let resultadoDeP = 1
     for (let y = p; y > 1; y--) {
-
       resultadoDeP = resultadoDeP * y
     }
 
@@ -570,7 +560,7 @@ describe('Calcula combinatoria', () => {
     let resultadoFinal = resultadoDeN / resultadoFinalDenominador
 
     expect(resultadoFinal).toBe(1)
-  });
+  })
 
   test('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -578,13 +568,11 @@ describe('Calcula combinatoria', () => {
     let p = 1
 
     for (let x = n; x > 1; x--) {
-
       resultadoDeN = resultadoDeN * x
     }
 
     let resultadoDeP = 1
     for (let y = p; y > 1; y--) {
-
       resultadoDeP = resultadoDeP * y
     }
 
@@ -598,21 +586,19 @@ describe('Calcula combinatoria', () => {
     let resultadoFinal = resultadoDeN / resultadoFinalDenominador
 
     expect(resultadoFinal).toBeUndefined
-  });
+  })
 
   test('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
-    let n = undefined
+    let n
     let p = 1
 
     for (let x = n; x > 1; x--) {
-
       resultadoDeN = resultadoDeN * x
     }
 
     let resultadoDeP = 1
     for (let y = p; y > 1; y--) {
-
       resultadoDeP = resultadoDeP * y
     }
 
@@ -626,21 +612,19 @@ describe('Calcula combinatoria', () => {
     let resultadoFinal = resultadoDeN / resultadoFinalDenominador
 
     expect(resultadoFinal).toBeUndefined
-  });
+  })
 
   test('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
     let n = 1
-    let p = undefined
+    let p
 
     for (let x = n; x > 1; x--) {
-
       resultadoDeN = resultadoDeN * x
     }
 
     let resultadoDeP = 1
     for (let y = p; y > 1; y--) {
-
       resultadoDeP = resultadoDeP * y
     }
 
@@ -654,21 +638,19 @@ describe('Calcula combinatoria', () => {
     let resultadoFinal = resultadoDeN / resultadoFinalDenominador
 
     expect(resultadoFinal).toBeUndefined
-  });
+  })
 
   test('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
-    let n = undefined
+    let n
     let p = null
 
     for (let x = n; x > 1; x--) {
-
       resultadoDeN = resultadoDeN * x
     }
 
     let resultadoDeP = 1
     for (let y = p; y > 1; y--) {
-
       resultadoDeP = resultadoDeP * y
     }
 
@@ -682,21 +664,19 @@ describe('Calcula combinatoria', () => {
     let resultadoFinal = resultadoDeN / resultadoFinalDenominador
 
     expect(resultadoFinal).toBeUndefined
-  });
+  })
 
   test('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
     let n = null
-    let p = undefined
+    let p
 
     for (let x = n; x > 1; x--) {
-
       resultadoDeN = resultadoDeN * x
     }
 
     let resultadoDeP = 1
     for (let y = p; y > 1; y--) {
-
       resultadoDeP = resultadoDeP * y
     }
 
@@ -710,21 +690,19 @@ describe('Calcula combinatoria', () => {
     let resultadoFinal = resultadoDeN / resultadoFinalDenominador
 
     expect(resultadoFinal).toBeUndefined
-  });
+  })
 
   test('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
     let n = NaN
-    let p = undefined
+    let p
 
     for (let x = n; x > 1; x--) {
-
       resultadoDeN = resultadoDeN * x
     }
 
     let resultadoDeP = 1
     for (let y = p; y > 1; y--) {
-
       resultadoDeP = resultadoDeP * y
     }
 
@@ -738,21 +716,19 @@ describe('Calcula combinatoria', () => {
     let resultadoFinal = resultadoDeN / resultadoFinalDenominador
 
     expect(resultadoFinal).toBeUndefined
-  });
+  })
 
   test('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
-    let n = undefined
+    let n
     let p = NaN
 
     for (let x = n; x > 1; x--) {
-
       resultadoDeN = resultadoDeN * x
     }
 
     let resultadoDeP = 1
     for (let y = p; y > 1; y--) {
-
       resultadoDeP = resultadoDeP * y
     }
 
@@ -766,7 +742,7 @@ describe('Calcula combinatoria', () => {
     let resultadoFinal = resultadoDeN / resultadoFinalDenominador
 
     expect(resultadoFinal).toBeUndefined
-  });
+  })
 
   test('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -774,13 +750,11 @@ describe('Calcula combinatoria', () => {
     let p = null
 
     for (let x = n; x > 1; x--) {
-
       resultadoDeN = resultadoDeN * x
     }
 
     let resultadoDeP = 1
     for (let y = p; y > 1; y--) {
-
       resultadoDeP = resultadoDeP * y
     }
 
@@ -794,7 +768,7 @@ describe('Calcula combinatoria', () => {
     let resultadoFinal = resultadoDeN / resultadoFinalDenominador
 
     expect(resultadoFinal).toBeUndefined
-  });
+  })
 
   test('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -802,13 +776,11 @@ describe('Calcula combinatoria', () => {
     let p = NaN
 
     for (let x = n; x > 1; x--) {
-
       resultadoDeN = resultadoDeN * x
     }
 
     let resultadoDeP = 1
     for (let y = p; y > 1; y--) {
-
       resultadoDeP = resultadoDeP * y
     }
 
@@ -822,7 +794,7 @@ describe('Calcula combinatoria', () => {
     let resultadoFinal = resultadoDeN / resultadoFinalDenominador
 
     expect(resultadoFinal).toBeUndefined
-  });
+  })
 
   test('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -830,13 +802,11 @@ describe('Calcula combinatoria', () => {
     let p = NaN
 
     for (let x = n; x > 1; x--) {
-
       resultadoDeN = resultadoDeN * x
     }
 
     let resultadoDeP = 1
     for (let y = p; y > 1; y--) {
-
       resultadoDeP = resultadoDeP * y
     }
 
@@ -850,7 +820,7 @@ describe('Calcula combinatoria', () => {
     let resultadoFinal = resultadoDeN / resultadoFinalDenominador
 
     expect(resultadoFinal).toBeUndefined
-  });
+  })
 
   test('deve calcular o arranjo de n e p', () => {
     let resultadoDeN = 1
@@ -858,13 +828,11 @@ describe('Calcula combinatoria', () => {
     let p = null
 
     for (let x = n; x > 1; x--) {
-
       resultadoDeN = resultadoDeN * x
     }
 
     let resultadoDeP = 1
     for (let y = p; y > 1; y--) {
-
       resultadoDeP = resultadoDeP * y
     }
 
@@ -878,5 +846,5 @@ describe('Calcula combinatoria', () => {
     let resultadoFinal = resultadoDeN / resultadoFinalDenominador
 
     expect(resultadoFinal).toBeUndefined
-  });
+  })
 })

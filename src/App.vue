@@ -1,7 +1,7 @@
 <template>
 
   <body>
-    <div id="app">
+    <div class="body-app" id="app">
       <OperacaoSelect v-model="operacao" />
       <div>
         <div v-if="operacao === 'permutacao'">
@@ -41,33 +41,29 @@
 
 </template>
 
-
 <script>
-import OperacaoSelect from "./components/OperacaoSelect"
-import { calculaPermutacao, calculaArranjo, calculaCombinatoria } from "./utils/calc"
-import {OrbitSpinner} from 'epic-spinners'
+import OperacaoSelect from './components/OperacaoSelect'
+import { calculaPermutacao, calculaArranjo, calculaCombinatoria } from './utils/calc'
+import { OrbitSpinner } from 'epic-spinners'
 
 export default {
   name: 'app',
   components: { OperacaoSelect, OrbitSpinner },
   data () {
     return {
-      operacao: "",
+      operacao: '',
       n: null,
       p: null,
-      resultado: null,
+      resultado: null
     }
-
   },
   methods: {
-    result (){
+    result () {
       if (this.operacao === 'permutacao') {
         this.resultado = calculaPermutacao(this.n)
-      }
-      else if (this.operacao === 'arranjo') {
+      } else if (this.operacao === 'arranjo') {
         this.resultado = calculaArranjo(this.n, this.p)
-      }
-      else if ( this.operacao === 'combinatoria') {
+      } else if (this.operacao === 'combinatoria') {
         this.resultado = calculaCombinatoria(this.n, this.p)
       }
     }
@@ -77,12 +73,17 @@ export default {
 
 <style lang='scss' scoped>
   body {
-    max-width: 100%;
+    width: 100%;;
     display: flex;
     align-content: center;
     justify-content: center;
     text-align: center;
-    border: solid thin blue;
+  }
+
+  .body-app {
+    border: solid;
+    margin-top: 20px;
+    padding: 20px;
   }
 
   input {
@@ -92,7 +93,6 @@ export default {
     min-width: 30%;
     text-align: center;
     font-size: 16px;
-
   }
 
   button {
@@ -101,7 +101,7 @@ export default {
     color: white;
     border: none;
     min-width: 100%;
-    margin: 15px 0;
+    margin: 50px 0;
     padding: 0.3em;
     font-size: 16px;
     cursor: pointer;
@@ -113,7 +113,5 @@ export default {
     width: 60px;
     height: 60px;
   }
-
-
 
 </style>

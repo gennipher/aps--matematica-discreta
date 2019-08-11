@@ -1,4 +1,4 @@
-function calculaPermutacao(n) {
+function calculaPermutacao (n) {
   let resultado = 1
   for (let x = n; x > 1; x--) {
     resultado = resultado * x
@@ -6,7 +6,7 @@ function calculaPermutacao(n) {
   return resultado
 }
 
-function calculaArranjo(n, p) {
+function calculaArranjo (n, p) {
   let resultadoDeN = 1
   for (let x = n; x > 1; x--) {
     resultadoDeN = resultadoDeN * x
@@ -20,18 +20,15 @@ function calculaArranjo(n, p) {
   return resultadoFinal
 }
 
-function calculaCombinatoria(n, p) {
-
+function calculaCombinatoria (n, p) {
   let resultadoDeN = 1
 
   for (let x = n; x > 1; x--) {
-
     resultadoDeN = resultadoDeN * x
   }
 
   let resultadoDeP = 1
   for (let y = p; y > 1; y--) {
-
     resultadoDeP = resultadoDeP * y
   }
 
@@ -45,6 +42,5 @@ function calculaCombinatoria(n, p) {
   let resultadoFinal = resultadoDeN / resultadoFinalDenominador
   return resultadoFinal
 }
-
 
 export { calculaArranjo, calculaCombinatoria, calculaPermutacao }
