@@ -81,14 +81,14 @@ export default {
   }
 
   .body-app {
-    border: solid;
+    border: solid rgb(147, 147, 236);
     margin-top: 20px;
     padding: 20px;
   }
 
   input {
     border: none;
-    border-bottom: solid 2px blue;
+    border-bottom: solid 2px rgb(147, 147, 236);
     margin: 5px ;
     min-width: 30%;
     text-align: center;
