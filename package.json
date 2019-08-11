@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "epic-spinners": "^1.1.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {
@@ -26,6 +27,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
+    "vue-loader": "^15.7.1",
     "vue-template-compiler": "^2.6.10"
   }
 }

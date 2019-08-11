@@ -1,44 +1,55 @@
 <template>
-  <div id="app">
-    <OperacaoSelect v-model="operacao" />
 
-    <div>
-      <div v-if="operacao === 'permutacao'">
-        <input placeholder="Informe o valor de n" v-model="n">
+  <body>
+    <div id="app">
+      <OperacaoSelect v-model="operacao" />
+      <div>
+        <div v-if="operacao === 'permutacao'">
+          <input placeholder="Informe o valor de n" v-model="n">
+        </div>
+        <div v-if="operacao === 'arranjo'">
+          <input placeholder="Informe o valor de n" v-model="n">
+          <input placeholder="Informe o valor de p" v-model="p">
+        </div>
+        <div v-if="operacao === 'combinatoria'">
+          <input placeholder="Informe o valor de n1" v-model="n">
+          <input placeholder="Informe o valor de p1" v-model="p">
+        </div>
       </div>
 
-      <div v-if="operacao === 'arranjo'">
-        <input placeholder="Informe o valor de n" v-model="n">
-
-        <input placeholder="Informe o valor de p" v-model="p">
+      <div class="button-resultado">
+        <button
+          type="button"
+          @click="result">
+          Calcular
+        </button>
       </div>
 
-      <div v-if="operacao === 'combinatoria'">
-        <input placeholder="Informe o valor de n1" v-model="n">
-        <input placeholder="Informe o valor de p1" v-model="p">
+      <div class="lds-spinner" id="loader">
+        <orbit-spinner
+          :animation-duration="1200"
+          :size="55"
+          :color="'blue'"
+
+        />
       </div>
 
-    </div>
-
-    <div class="button-resultado">
-      <button
-        type="button"
-        @click="result">
-        Calcular
-      </button>
       {{ resultado }}
+
     </div>
-  </div>
+  </body>
+
 </template>
 
 
 <script>
 import OperacaoSelect from "./components/OperacaoSelect"
 import { calculaPermutacao, calculaArranjo, calculaCombinatoria } from "./utils/calc"
+import {OrbitSpinner} from 'epic-spinners'
 
 export default {
   name: 'app',
-  components: { OperacaoSelect },
+  components: { OperacaoSelect, OrbitSpinner },
   data () {
     return {
       operacao: "",
@@ -65,24 +76,44 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+  body {
+    max-width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    border: solid thin blue;
+  }
+
   input {
     border: none;
-    border-bottom: solid 1px rgb(147, 147, 236);
-    margin: 0.5em;
-    padding: 1em;
-    width: 135px;
-    text-align: center
+    border-bottom: solid 2px blue;
+    margin: 5px ;
+    min-width: 30%;
+    text-align: center;
+    font-size: 16px;
+
   }
 
   button {
     display: inline-block;
-    margin: 0.5em;
-    padding: 1em;
     background-color: rgb(147, 147, 236);
     color: white;
     border: none;
-    width: 135px;
+    min-width: 100%;
+    margin: 15px 0;
+    padding: 0.3em;
+    font-size: 16px;
     cursor: pointer;
   }
+
+  .lds-spinner {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 60px;
+  }
+
+
 
 </style>

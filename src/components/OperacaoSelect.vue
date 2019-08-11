@@ -53,11 +53,9 @@ export default {
 
 <style lang='scss' scoped>
   label {
-    display: inline-block;
-    margin: 0.5em;
-    padding: 1em;
-    background-color: rgb(147, 147, 236);
-    color: white;
+    display: inline-flex;
+    padding: 10px;
+    margin: 5px;
     cursor: pointer;
   }
 </style>
