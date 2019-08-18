@@ -52,7 +52,6 @@
           :animation-duration="1200"
           :size="55"
           :color="'blue'"
-
         />
       </div> -->
 
@@ -64,11 +63,14 @@
 <script>
 import OperacaoSelect from './components/OperacaoSelect'
 import { calculaPermutacao, calculaArranjo, calculaCombinatoria } from './utils/calc'
-import { OrbitSpinner } from 'epic-spinners'
+/* import { OrbitSpinner } from 'epic-spinners' */
 
 export default {
   name: 'app',
-  components: { OperacaoSelect, OrbitSpinner },
+  components: {
+    OperacaoSelect
+    /* OrbitSpinner */
+  },
   data () {
     return {
       operacao: '',
