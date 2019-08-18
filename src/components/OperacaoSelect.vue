@@ -55,7 +55,7 @@ export default {
     display: inline-flex;
     padding: 10px;
     margin: 20px 20px 40px;
-    font-size: 20px;
+    font-size: 18px;
     cursor: pointer;
   }
 </style>

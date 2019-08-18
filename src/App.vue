@@ -12,8 +12,9 @@
             @click="result">
             Calcular
           </button>
-      </div>
+          </div>
         </div>
+
         <div v-if="operacao === 'arranjo'">
           <input placeholder="Informe o valor de n" v-model="n">
           <input placeholder="Informe o valor de p" v-model="p">
@@ -23,8 +24,9 @@
             @click="result">
             Calcular
           </button>
-      </div>
+          </div>
         </div>
+
         <div v-if="operacao === 'combinatoria'">
           <input placeholder="Informe o valor de n1" v-model="n">
           <input placeholder="Informe o valor de p1" v-model="p">
@@ -34,9 +36,16 @@
             @click="result">
             Calcular
           </button>
-      </div>
+
+          </div>
         </div>
       </div>
+
+      <span>
+        <p id="resultado">
+        {{ resultado }}
+        </p>
+      </span>
 
       <!-- <div class="lds-spinner" id="loader">
         <orbit-spinner
@@ -46,8 +55,6 @@
 
         />
       </div> -->
-
-      {{ resultado }}
 
     </div>
   </body>
@@ -105,7 +112,7 @@ export default {
     margin: 5px ;
     min-width: 30%;
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   button {
@@ -113,10 +120,10 @@ export default {
     background-color: rgb(147, 147, 236);
     color: white;
     border: none;
-    min-width: 100%;
+    min-width: 30%;
     margin: 50px 0;
     padding: 0.3em;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
   }
 
@@ -127,4 +134,7 @@ export default {
     height: 60px;
   }
 
+  #resultado {
+    font-size: 20px;
+  }
 </style>
