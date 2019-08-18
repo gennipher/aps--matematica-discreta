@@ -6,33 +6,46 @@
       <div>
         <div v-if="operacao === 'permutacao'">
           <input placeholder="Informe o valor de n" v-model="n">
+          <div class="button-resultado">
+          <button
+            type="button"
+            @click="result">
+            Calcular
+          </button>
+      </div>
         </div>
         <div v-if="operacao === 'arranjo'">
           <input placeholder="Informe o valor de n" v-model="n">
           <input placeholder="Informe o valor de p" v-model="p">
+          <div class="button-resultado">
+          <button
+            type="button"
+            @click="result">
+            Calcular
+          </button>
+      </div>
         </div>
         <div v-if="operacao === 'combinatoria'">
           <input placeholder="Informe o valor de n1" v-model="n">
           <input placeholder="Informe o valor de p1" v-model="p">
+          <div class="button-resultado">
+          <button
+            type="button"
+            @click="result">
+            Calcular
+          </button>
+      </div>
         </div>
       </div>
 
-      <div class="button-resultado">
-        <button
-          type="button"
-          @click="result">
-          Calcular
-        </button>
-      </div>
-
-      <div class="lds-spinner" id="loader">
+      <!-- <div class="lds-spinner" id="loader">
         <orbit-spinner
           :animation-duration="1200"
           :size="55"
           :color="'blue'"
 
         />
-      </div>
+      </div> -->
 
       {{ resultado }}
 
